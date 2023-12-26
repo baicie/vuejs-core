@@ -38,7 +38,7 @@ async function main() {
 
 async function buildAll(target: Project[]) {
   // 并行打包
-  return runParallel(os.cpus().length, target, build)
+  return runParallel(Number.MAX_SAFE_INTEGER, target, build)
 }
 
 async function runParallel(
