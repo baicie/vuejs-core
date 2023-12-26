@@ -202,6 +202,8 @@ export function createAppAPI<HostElement>(
   hydrate?: RootHydrateFunction
 ): CreateAppFunction<HostElement> {
   return function createApp(rootComponent, rootProps = null) {
+    console.log('createApp123')
+
     if (!isFunction(rootComponent)) {
       rootComponent = extend({}, rootComponent)
     }
